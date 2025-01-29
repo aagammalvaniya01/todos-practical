@@ -1,5 +1,5 @@
 'use client'
-
+/* eslint-disable @typescript-eslint/no-unused-vars */
  
 export default function GlobalError({
   error,

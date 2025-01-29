@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 export function readLocalStorage(key: string) {
   try {
     return testJSON(localStorage.getItem(key) ?? "");

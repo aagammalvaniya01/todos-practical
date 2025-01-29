@@ -1,5 +1,5 @@
 "use client";
-
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Box, Container, Typography } from "@mui/material";
 import React, { useState } from "react";
 import FormWrapper from "./FormWrapper";
