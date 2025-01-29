@@ -1,12 +1,13 @@
 "use client";
 
 import { ROUTES } from '@/app/services/routes';
-import useAuth from '../../app/hooks/user';
+import { useGlobalContext } from "@/app/context/GlobalContext";
 import { Box, Button, Container, Link, Typography } from '@mui/material'
 import React from 'react'
 
 const HomeWrapper = () => {
-    const isLoggedIn = useAuth();
+  const { isLoggedIn } = useGlobalContext();
+
     return (
         <div>
             <Box sx={{

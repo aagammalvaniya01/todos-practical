@@ -1,51 +1,59 @@
-
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React from 'react';
-import { Formik, Field, Form, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
-import { TextField, Checkbox, FormControlLabel, Button, Stack } from '@mui/material';
-import { toast } from 'react-toastify';
-import { writeLocalStorage } from '../../app/services/local-storage'
+import React from "react";
+import { Formik, Field, Form, ErrorMessage } from "formik";
+import * as Yup from "yup";
+import {
+  TextField,
+  Checkbox,
+  FormControlLabel,
+  Button,
+  Stack,
+} from "@mui/material";
+import { toast } from "react-toastify";
+import { writeLocalStorage } from "../../app/services/local-storage";
+import { useGlobalContext } from "@/app/context/GlobalContext";
 
 interface loginFormProps {
   onSuccess?: any;
   users: {
     email: string;
-    password: string
-  }[]
-
+    password: string;
+  }[];
 }
 
 const validationSchema = Yup.object({
   email: Yup.string()
-    .email('Invalid email address')
-    .required('Email is required'),
+    .email("Invalid email address")
+    .required("Email is required"),
   password: Yup.string()
-    .min(6, 'Password must be at least 6 characters')
-    .required('Password is required'),
+    .min(6, "Password must be at least 6 characters")
+    .required("Password is required"),
   rememberMe: Yup.boolean(),
 });
 
 const LoginForm = ({ users, onSuccess }: loginFormProps) => {
-
+  const { setIsLoggedIn } = useGlobalContext();
   const handleLogin = (email: string, password: string) => {
-    const user = users.find((user) => user.email === email && user.password === password);
+    const user = users.find(
+      (user) => user.email === email && user.password === password
+    );
 
     if (user) {
       onSuccess();
-      writeLocalStorage("isLoggedIn", "true")
+      writeLocalStorage("isLoggedIn", "true");
+      setIsLoggedIn(true);
     } else {
-      toast.error('Invalid email or password');
+      toast.error("Invalid email or password");
     }
   };
 
   return (
     <Formik
-      initialValues={{ email: '', password: '', rememberMe: false }}
+      initialValues={{ email: "", password: "", rememberMe: false }}
       validationSchema={validationSchema}
       onSubmit={(values) => handleLogin(values.email, values.password)}
     >
-      {({ isSubmitting, setFieldValue, values, touched, setFieldTouched }) => (
+      {({ setFieldValue, values, touched, setFieldTouched }) => (
         <Form>
           <Stack spacing={2}>
             <Field
@@ -55,11 +63,11 @@ const LoginForm = ({ users, onSuccess }: loginFormProps) => {
               fullWidth
               onChange={(e: any) => {
                 setFieldValue("email", e.target.value);
-                setFieldTouched("email", false)
+                setFieldTouched("email", false);
               }}
               variant="outlined"
               helperText={touched.email && <ErrorMessage name="email" />}
-              error={touched.email && (<ErrorMessage name="email" />)}
+              error={touched.email && <ErrorMessage name="email" />}
             />
 
             <Field
@@ -71,10 +79,10 @@ const LoginForm = ({ users, onSuccess }: loginFormProps) => {
               variant="outlined"
               onChange={(e: any) => {
                 setFieldValue("password", e.target.value);
-                setFieldTouched("password", false)
+                setFieldTouched("password", false);
               }}
               helperText={touched.email && <ErrorMessage name="password" />}
-              error={touched.email && (<ErrorMessage name="password" />)}
+              error={touched.email && <ErrorMessage name="password" />}
             />
 
             <FormControlLabel
@@ -82,12 +90,12 @@ const LoginForm = ({ users, onSuccess }: loginFormProps) => {
                 <Checkbox
                   checked={values.rememberMe}
                   onChange={(e) =>
-                    setFieldValue('rememberMe', e.target.checked, true)
+                    setFieldValue("rememberMe", e.target.checked, true)
                   }
                   sx={{
-                    color: '#155FF6',
-                    '&.Mui-checked': {
-                      color: '#155FF6',
+                    color: "#155FF6",
+                    "&.Mui-checked": {
+                      color: "#155FF6",
                     },
                   }}
                 />

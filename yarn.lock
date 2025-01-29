@@ -191,6 +191,11 @@
   resolved "https://registry.npmjs.org/@emotion/weak-memoize/-/weak-memoize-0.4.0.tgz"
   integrity sha512-snKqtPW01tN0ui7yu9rGv69aJXr/a/Ywvl11sUjNtEcRc+ng/mQriFL0wLXMef74iHa/EkftbDzU9F8iFbH+zg==
 
+"@img/sharp-win32-x64@0.33.5":
+  version "0.33.5"
+  resolved "https://registry.npmjs.org/@img/sharp-win32-x64/-/sharp-win32-x64-0.33.5.tgz"
+  integrity sha512-MpY/o8/8kj+EcnxwvrP4aTJSWw/aZ7JIGR4aBeZkZw5B7/Jn+tY9/VNwtcoGmdT7GfggGIU4kygOMSbYnOrAbg==
+
 "@jridgewell/gen-mapping@^0.3.5":
   version "0.3.8"
   resolved "https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.8.tgz"
@@ -223,10 +228,17 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@mui/core-downloads-tracker@^6.4.1":
-  version "6.4.1"
-  resolved "https://registry.npmjs.org/@mui/core-downloads-tracker/-/core-downloads-tracker-6.4.1.tgz"
-  integrity sha512-SfDLWMV5b5oXgDf3NTa2hCTPC1d2defhDH2WgFKmAiejC4mSfXYbyi+AFCLzpizauXhgBm8OaZy9BHKnrSpahQ==
+"@mui/core-downloads-tracker@^6.4.2":
+  version "6.4.2"
+  resolved "https://registry.npmjs.org/@mui/core-downloads-tracker/-/core-downloads-tracker-6.4.2.tgz"
+  integrity sha512-Qmod9fHsFWrtLxdSkZ4iDLRz2AUKt3C2ZEimuY+qKlQGVKJDNS5DuSlNOAgqfHFDq8mzB17ATN6HFcThwJlvUw==
+
+"@mui/icons-material@^6.4.2":
+  version "6.4.2"
+  resolved "https://registry.npmjs.org/@mui/icons-material/-/icons-material-6.4.2.tgz"
+  integrity sha512-uwsH1KRmxkJwK3NZyo1xL9pEduL16ftCnzYBYjd6nPNtm05QAoIc0aqedS9tqDV+Ab3q5C04HHOVsMDDv1EBpg==
+  dependencies:
+    "@babel/runtime" "^7.26.0"
 
 "@mui/material-nextjs@^6.3.1":
   version "6.3.1"
@@ -235,16 +247,16 @@
   dependencies:
     "@babel/runtime" "^7.26.0"
 
-"@mui/material@^6.4.1":
-  version "6.4.1"
-  resolved "https://registry.npmjs.org/@mui/material/-/material-6.4.1.tgz"
-  integrity sha512-MFBfia6UiKxyoLeGkAh8M15bkeDmfnsUTMRJd/vTQue6YQ8AQ6lw9HqDthyYghzDEWIvZO/lQQzLrZE8XwNJLA==
+"@mui/material@^6.4.1", "@mui/material@^6.4.2":
+  version "6.4.2"
+  resolved "https://registry.npmjs.org/@mui/material/-/material-6.4.2.tgz"
+  integrity sha512-9jKr53KbAJyyBRx8LRmX7ATXHlGtxVQdPgm1uyXMoEPMVkSJW1yO3vFgfYoDbGx4ZHcCNuWa4FkFIPWVt9fghA==
   dependencies:
     "@babel/runtime" "^7.26.0"
-    "@mui/core-downloads-tracker" "^6.4.1"
-    "@mui/system" "^6.4.1"
+    "@mui/core-downloads-tracker" "^6.4.2"
+    "@mui/system" "^6.4.2"
     "@mui/types" "^7.2.21"
-    "@mui/utils" "^6.4.1"
+    "@mui/utils" "^6.4.2"
     "@popperjs/core" "^2.11.8"
     "@types/react-transition-group" "^4.4.12"
     clsx "^2.1.1"
@@ -253,19 +265,19 @@
     react-is "^19.0.0"
     react-transition-group "^4.4.5"
 
-"@mui/private-theming@^6.4.1":
-  version "6.4.1"
-  resolved "https://registry.npmjs.org/@mui/private-theming/-/private-theming-6.4.1.tgz"
-  integrity sha512-DcT7mwK89owwgcEuiE7w458te4CIjHbYWW6Kn6PiR6eLtxBsoBYphA968uqsQAOBQDpbYxvkuFLwhgk4bxoN/Q==
+"@mui/private-theming@^6.4.2":
+  version "6.4.2"
+  resolved "https://registry.npmjs.org/@mui/private-theming/-/private-theming-6.4.2.tgz"
+  integrity sha512-2CkQT0gNlogM50qGTBJgWA7hPPx4AeH8RE2xJa+PHtIOowiVPX52ZsQ0e7Ho18DAqEbkngQ6Uju037ER+TCY5A==
   dependencies:
     "@babel/runtime" "^7.26.0"
-    "@mui/utils" "^6.4.1"
+    "@mui/utils" "^6.4.2"
     prop-types "^15.8.1"
 
-"@mui/styled-engine@^6.4.0":
-  version "6.4.0"
-  resolved "https://registry.npmjs.org/@mui/styled-engine/-/styled-engine-6.4.0.tgz"
-  integrity sha512-ek/ZrDujrger12P6o4luQIfRd2IziH7jQod2WMbLqGE03Iy0zUwYmckRTVhRQTLPNccpD8KXGcALJF+uaUQlbg==
+"@mui/styled-engine@^6.4.2":
+  version "6.4.2"
+  resolved "https://registry.npmjs.org/@mui/styled-engine/-/styled-engine-6.4.2.tgz"
+  integrity sha512-cgjQK2bkllSYoWUBv93ALhCPJ0NhfO3NctsBf13/b4XSeQVfKPBAnR+P9mNpdFMa5a5RWwtWuBD3cZ5vktsN+g==
   dependencies:
     "@babel/runtime" "^7.26.0"
     "@emotion/cache" "^11.13.5"
@@ -274,16 +286,16 @@
     csstype "^3.1.3"
     prop-types "^15.8.1"
 
-"@mui/system@^6.4.1":
-  version "6.4.1"
-  resolved "https://registry.npmjs.org/@mui/system/-/system-6.4.1.tgz"
-  integrity sha512-rgQzgcsHCTtzF9MZ+sL0tOhf2ZBLazpjrujClcb4Siju5lTrK0xX4PsiropActzCemNfM+mOu+0jezAVnfRK8g==
+"@mui/system@^6.4.2":
+  version "6.4.2"
+  resolved "https://registry.npmjs.org/@mui/system/-/system-6.4.2.tgz"
+  integrity sha512-wQbaPCtsxNsM5nR+NZpkFJBKVKH03GQnAjlkKENM8JQqGdWcRyM3f4fJZgzzNdIFpSQw4wpAQKnhfHkjf3d6yQ==
   dependencies:
     "@babel/runtime" "^7.26.0"
-    "@mui/private-theming" "^6.4.1"
-    "@mui/styled-engine" "^6.4.0"
+    "@mui/private-theming" "^6.4.2"
+    "@mui/styled-engine" "^6.4.2"
     "@mui/types" "^7.2.21"
-    "@mui/utils" "^6.4.1"
+    "@mui/utils" "^6.4.2"
     clsx "^2.1.1"
     csstype "^3.1.3"
     prop-types "^15.8.1"
@@ -293,10 +305,10 @@
   resolved "https://registry.npmjs.org/@mui/types/-/types-7.2.21.tgz"
   integrity sha512-6HstngiUxNqLU+/DPqlUJDIPbzUBxIVHb1MmXP0eTWDIROiCR2viugXpEif0PPe2mLqqakPzzRClWAnK+8UJww==
 
-"@mui/utils@^6.4.1":
-  version "6.4.1"
-  resolved "https://registry.npmjs.org/@mui/utils/-/utils-6.4.1.tgz"
-  integrity sha512-iQUDUeYh87SvR4lVojaRaYnQix8BbRV51MxaV6MBmqthecQoxwSbS5e2wnbDJUeFxY2ppV505CiqPLtd0OWkqw==
+"@mui/utils@^6.4.2":
+  version "6.4.2"
+  resolved "https://registry.npmjs.org/@mui/utils/-/utils-6.4.2.tgz"
+  integrity sha512-5NkhzlJkmR5+5RSs/Irqin1GPy2Z8vbLk/UzQrH9FEAnm6OA9SvuXjzgklxUs7N65VwEkGpKK1jMZ5K84hRdzQ==
   dependencies:
     "@babel/runtime" "^7.26.0"
     "@mui/types" "^7.2.21"
@@ -410,6 +422,34 @@ clsx@^2.1.1:
   resolved "https://registry.npmjs.org/clsx/-/clsx-2.1.1.tgz"
   integrity sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==
 
+color-convert@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz"
+  integrity sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==
+  dependencies:
+    color-name "~1.1.4"
+
+color-name@^1.0.0, color-name@~1.1.4:
+  version "1.1.4"
+  resolved "https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz"
+  integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
+
+color-string@^1.9.0:
+  version "1.9.1"
+  resolved "https://registry.npmjs.org/color-string/-/color-string-1.9.1.tgz"
+  integrity sha512-shrVawQFojnZv6xM40anx4CkoDP+fZsw/ZerEMsW/pyzsRbElpsL/DBVW7q3ExxwusdNXI3lXpuhEZkzs8p5Eg==
+  dependencies:
+    color-name "^1.0.0"
+    simple-swizzle "^0.2.2"
+
+color@^4.2.3:
+  version "4.2.3"
+  resolved "https://registry.npmjs.org/color/-/color-4.2.3.tgz"
+  integrity sha512-1rXeuUUiGGrykh+CeBdu5Ie7OJwinCgQY0bc7GCRxy5xVHy+moaqkpL/jqQq0MtQOeYcrqEz4abc5f0KtU7W4A==
+  dependencies:
+    color-convert "^2.0.1"
+    color-string "^1.9.0"
+
 convert-source-map@^1.5.0:
   version "1.9.0"
   resolved "https://registry.npmjs.org/convert-source-map/-/convert-source-map-1.9.0.tgz"
@@ -447,6 +487,11 @@ deepmerge@^2.1.1:
   version "2.2.1"
   resolved "https://registry.npmjs.org/deepmerge/-/deepmerge-2.2.1.tgz"
   integrity sha512-R9hc1Xa/NOBi9WRVUWg19rl1UB7Tt4kuPd+thNJgFZoxXsTz7ncaPaeIm+40oSGuP33DfMb4sZt1QIGiJzC4EA==
+
+detect-libc@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.npmjs.org/detect-libc/-/detect-libc-2.0.3.tgz"
+  integrity sha512-bwy0MGW55bG41VqxxypOsdSdGqLwXPI/focwgTYCFMbdUiBAxLg9CFzG08sz2aqzknwiX7Hkl0bQENjg8iLByw==
 
 dom-helpers@^5.0.1:
   version "5.2.1"
@@ -523,6 +568,11 @@ is-arrayish@^0.2.1:
   version "0.2.1"
   resolved "https://registry.npmjs.org/is-arrayish/-/is-arrayish-0.2.1.tgz"
   integrity sha512-zz06S8t0ozoDXMG+ube26zeCTNXcKIPJZJi8hBrF4idCLms4CG9QtK7qBl1boi5ODzFpjswb5JPmHCbMpjaYzg==
+
+is-arrayish@^0.3.1:
+  version "0.3.2"
+  resolved "https://registry.npmjs.org/is-arrayish/-/is-arrayish-0.3.2.tgz"
+  integrity sha512-eVRqCvVlZbuw3GrM63ovNSNAeA1K16kaR/LRY/92w0zxQ5/1YzwblUX652i4Xs9RwAGjW9d9y6X88t8OaAJfWQ==
 
 is-core-module@^2.16.0:
   version "2.16.1"
@@ -728,6 +778,47 @@ scheduler@^0.25.0:
   version "0.25.0"
   resolved "https://registry.npmjs.org/scheduler/-/scheduler-0.25.0.tgz"
   integrity sha512-xFVuu11jh+xcO7JOAGJNOXld8/TcEHK/4CituBUeUb5hqxJLj9YuemAEuvm9gQ/+pgXYfbQuqAkiYu+u7YEsNA==
+
+semver@^7.6.3:
+  version "7.6.3"
+  resolved "https://registry.npmjs.org/semver/-/semver-7.6.3.tgz"
+  integrity sha512-oVekP1cKtI+CTDvHWYFUcMtsK/00wmAEfyqKfNdARm8u1wNVhSgaX7A8d4UuIlUI5e84iEwOhs7ZPYRmzU9U6A==
+
+sharp@^0.33.5:
+  version "0.33.5"
+  resolved "https://registry.npmjs.org/sharp/-/sharp-0.33.5.tgz"
+  integrity sha512-haPVm1EkS9pgvHrQ/F3Xy+hgcuMV0Wm9vfIBSiwZ05k+xgb0PkBQpGsAA/oWdDobNaZTH5ppvHtzCFbnSEwHVw==
+  dependencies:
+    color "^4.2.3"
+    detect-libc "^2.0.3"
+    semver "^7.6.3"
+  optionalDependencies:
+    "@img/sharp-darwin-arm64" "0.33.5"
+    "@img/sharp-darwin-x64" "0.33.5"
+    "@img/sharp-libvips-darwin-arm64" "1.0.4"
+    "@img/sharp-libvips-darwin-x64" "1.0.4"
+    "@img/sharp-libvips-linux-arm" "1.0.5"
+    "@img/sharp-libvips-linux-arm64" "1.0.4"
+    "@img/sharp-libvips-linux-s390x" "1.0.4"
+    "@img/sharp-libvips-linux-x64" "1.0.4"
+    "@img/sharp-libvips-linuxmusl-arm64" "1.0.4"
+    "@img/sharp-libvips-linuxmusl-x64" "1.0.4"
+    "@img/sharp-linux-arm" "0.33.5"
+    "@img/sharp-linux-arm64" "0.33.5"
+    "@img/sharp-linux-s390x" "0.33.5"
+    "@img/sharp-linux-x64" "0.33.5"
+    "@img/sharp-linuxmusl-arm64" "0.33.5"
+    "@img/sharp-linuxmusl-x64" "0.33.5"
+    "@img/sharp-wasm32" "0.33.5"
+    "@img/sharp-win32-ia32" "0.33.5"
+    "@img/sharp-win32-x64" "0.33.5"
+
+simple-swizzle@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.npmjs.org/simple-swizzle/-/simple-swizzle-0.2.2.tgz"
+  integrity sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg==
+  dependencies:
+    is-arrayish "^0.3.1"
 
 source-map-js@^1.0.2:
   version "1.2.1"
