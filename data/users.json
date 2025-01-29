@@ -1,0 +1,30 @@
+[
+  {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  {
+    "email": "user2@example.com",
+    "password": "password456"
+  },
+  {
+    "email": "test@gm.com",
+    "password": "test@1222"
+  },
+  {
+    "email": "aagamm@gmail.com",
+    "password": "Test@12345"
+  },
+  {
+    "email": "test@gmail.com",
+    "password": "weerrw"
+  },
+  {
+    "email": "hbsjbds@gm.com",
+    "password": "test@1233"
+  },
+  {
+    "email": "aagamm22@gm.com",
+    "password": "Testz@1233"
+  }
+]
