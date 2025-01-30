@@ -30,8 +30,9 @@ export async function POST(req: Request) {
         { status: 400 }
       );
     }
+    const id = users.length > 0 ? users[users.length - 1].id + 1 : 1
 
-    const newUser = { email, password };
+    const newUser = { id, email, password };
     users.push(newUser);
 
     fs.writeFileSync(filePath, JSON.stringify(users, null, 2));

@@ -40,3 +40,10 @@ a {
     color-scheme: dark;
   }
 }
+
+.error{
+  color: red;
+  margin-top: 8px !important;
+  font-style: italic;
+  font-size: 12px;
+}

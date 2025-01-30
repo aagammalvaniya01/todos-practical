@@ -1,18 +1,11 @@
 "use client";
 
-import React, { useState } from 'react'
+import React from 'react'
 import RegisterForm from './FormWrapper';
-import usersData from '../../data/users.json'
 import { Box, Container, Typography } from "@mui/material";
 
 const RegisterWrapper = () => {
-  const [users, setUsers] = useState(usersData);
 
-  const handleRegister = (email: string, password: string) => {
-    const newUser = { email, password };
-    setUsers([...users, newUser]);
-    alert('Registration successful!');
-  };
   return (
     <>
       <Box
@@ -47,7 +40,7 @@ const RegisterWrapper = () => {
               <Typography color='#00030A' textAlign={'center'} variant="body1" mb={3}>
                 Create An Account For Access Dashboard
               </Typography>
-              <RegisterForm onRegister={handleRegister} />
+              <RegisterForm />
             </Box>
           </Box>
         </Container>

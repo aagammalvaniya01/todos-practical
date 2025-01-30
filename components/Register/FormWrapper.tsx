@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 import { useRouter } from "next/navigation";
 import { ROUTES } from '@/app/services/routes';
 
-const RegisterForm = ({ onRegister }: { onRegister: (email: string, password: string) => void }) => {
+const RegisterForm = () => {
     const router = useRouter();
 
     const validationSchema = Yup.object({

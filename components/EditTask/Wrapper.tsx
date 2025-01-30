@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import {
@@ -16,7 +16,7 @@ import {
   Link,
 } from "@mui/material";
 import { toast } from "react-toastify";
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 import { ROUTES } from "@/app/services/routes";
 import usersData from "../../data/users.json";
 
@@ -28,23 +28,49 @@ const taskSchema = Yup.object({
   user_id: Yup.string().required("User is required"),
 });
 
-const AddTaskWrapper = ({}) => {
+const EditTaskWrapper = ({}) => {
   const router = useRouter();
+  const { id } = useParams();
+  const [taskData, setTaskData] = useState<any>(null); // Store task data from API
+  const [loading, setLoading] = useState(true); // Loading state
 
+  useEffect(() => {
+    // Ensure the id is available before making an API call
+    if (id) {
+      const fetchTaskData = async () => {
+        try {
+          const response = await fetch(`https://dummyjson.com/todos/${id}`);
+          const data = await response.json();
+          setTaskData(data); // Set task data from API response
+        } catch (error) {
+          console.error("Error fetching task data:", error);
+        } finally {
+          setLoading(false); // Set loading state to false when data is fetched
+        }
+      };
+
+      fetchTaskData();
+    }
+  }, [id]);
+
+  if (loading) return <div>Loading...</div>;
   const handleTaskSubmit = async (values: any) => {
     console.log("New Task:", values);
-
-    const response = await fetch("/api/task", {
-      method: "POST",
+    const payload = {
+      todo: values.title,
+      completed: values.status === "completed" ? true : false,
+    };
+    const response = await fetch("https://dummyjson.com/todos/1", {
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(values),
+      body: JSON.stringify(payload),
     });
 
     const data = await response.json();
-    if (response.status === 201) {
-      toast.success(data.message);
+    if (response.status === 200) {
+      toast.success("Task updated successfully");
       router.push(ROUTES.DASHBOARD);
     } else {
       toast.error(data.message);
@@ -57,13 +83,13 @@ const AddTaskWrapper = ({}) => {
         background: "#F7F8F8",
       }}
     >
-      <Box ml={{ xs: 2, md: 6 }} pt={{ xs: 2, md: 4 }}>
+       <Box ml={{xs: 2, md: 6}} pt={{xs: 2, md: 4}}>
         <Link href={ROUTES.DASHBOARD}>
-          <Button variant="outlined" size="small">
-            Back To Dashboard
-          </Button>
+                    <Button variant="outlined" size="small">
+                      Back To Dashboard
+                    </Button>
         </Link>
-      </Box>
+                  </Box>
       <Container
         maxWidth="md"
         sx={{
@@ -92,11 +118,11 @@ const AddTaskWrapper = ({}) => {
             textAlign={"center"}
             fontSize={32}
           >
-            Create new Task
+            Edit Task
           </Typography>
           <Formik
             initialValues={{
-              title: "",
+              title: taskData.todo,
               description: "",
               status: "",
               due_date: "",
@@ -109,7 +135,7 @@ const AddTaskWrapper = ({}) => {
               <Form>
                 <Stack spacing={2}>
                   <Field name="title" as={TextField} label="Title" fullWidth variant="outlined" />
-                  <ErrorMessage name="title" component="div" className="error"/>
+                  <ErrorMessage name="title" component="div" className="error" />
 
                   <Field
                     name="description"
@@ -140,7 +166,7 @@ const AddTaskWrapper = ({}) => {
                     fullWidth
                     InputLabelProps={{ shrink: true }}
                   />
-                  <ErrorMessage name="due_date" component="div" className="error"/>
+                  <ErrorMessage name="due_date" component="div" className="error" />
 
                   <FormControl fullWidth>
                     <InputLabel>User</InputLabel>
@@ -152,10 +178,10 @@ const AddTaskWrapper = ({}) => {
                       ))}
                     </Field>
                   </FormControl>
-                  <ErrorMessage name="user_id" component="div" className="error"/>
+                  <ErrorMessage name="user_id" component="div" className="error" />
 
                   <Button type="submit" fullWidth variant="contained">
-                    Create Task
+                    Update Task
                   </Button>
                 </Stack>
               </Form>
@@ -167,4 +193,4 @@ const AddTaskWrapper = ({}) => {
   );
 };
 
-export default AddTaskWrapper;
+export default EditTaskWrapper;

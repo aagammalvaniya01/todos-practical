@@ -2,5 +2,6 @@ export const ROUTES = {
     HOME: '/',
     DASHBOARD: '/tasks',
     LOGIN: '/login',
-    REGISTER: '/register'
+    REGISTER: '/register',
+    ADD_TASK: '/tasks/new'
 }
